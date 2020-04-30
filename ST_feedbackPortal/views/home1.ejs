@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title> dashboard </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/b07c4a6bf3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/user_dashboard.css">
+</head> 
+
+<body id="page" class="container-fluid" >
+
+   
+
+    <div class="container-fluid" id="head">
+        <div class="jumbotron">
+            <div class="row">
+                <div class=" col-md-6 col-sm-12 row">
+                    <div class="thumbnail pl-3">
+                        <img src="my-image.jpg">
+                    </div>
+                    <span id="profileName" class="px-5"><%= name %></span>
+                </div>
+                <div class="col-md-6 col-sm-12 row py-0">
+                    <div class="card" >
+                        <div class="card-body">
+                          <h1 class="card-title">User Info.</h1>
+                          <h2 class="card-subtitle mb-2 text-muted"><%= id%></h2>
+                          <h2 class="card-subtitle mb-2 text-muted"><%= email%></h2>
+                          <h2 class="card-subtitle mb-2 text-muted"><%= phone_no%></h2>
+                          <h2 class="card-subtitle mb-2 text-muted"><%= department_name%></h2>
+
+                          <!-- <h2 class="card-subtitle mb-2 text-muted">India</h2> -->
+                          <a href="#" class="card-link">Profile</a>
+                        </div>
+                    </div>
+                </div>
+            </div>                
+        </div>
+    </div> 
+
+    <div id="region-main" class="container-fluid">
+        <div class="card mb-3">
+            <div class="card-body" style="min-height: 80vh;  padding: 2.5rem;">
+                <div role="main">
+                    <div class="card mb-3">
+                        <div class="card-body" style="min-height:50vh;">
+                            <div class="card-title d-inline">
+                                <h5 class="card-title d-inline">Feedback overview</h5>
+                            </div>
+                            <div class="card-text content mt-3">
+                                <div class="block_myoverview">
+                                    <ul class="nav nav-tabs" role="tablist">
+                                        <li class="nav-item">
+                                            <a class="nav-link active show" href="#" role="tab" data-toggle="tab" data-tabname="timeline"  aria-selected="true">
+                                                Timeline
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#" role="tab" data-toggle="tab" data-tabname="courses" aria-selected="false" >
+                                                Courses
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <div class="table-content content-centred">
+                                        <div role="tabpanel" class="tab-pane fade in active show" id="myoverview_timeline_view">
+                                            <div data-region="timeline-view">
+                                                <div class="tab-content">
+                                                    <div class="tab-pane active fade show" id="myoverview_timeline_dates">
+                                                        <div data-region="event-list-container" data-limit="20" id="event-list-container" class data-loaded-all="true">
+                                                            
+                                                            <div class="text-xs-center text-center m-t-3" data-region="empty-message">
+                                                                <img class="empty-placeholder-image-lg" src="http://14.139.234.187:8080/moodle/theme/image.php/boost/block_myoverview/1537341388/activities" alt="No upcoming activities due" role="presentation" id="yui_3_17_2_1_1587199372917_112">
+                                                                <p class="text-muted m-t-1" >No upcoming activities due</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div role="tabpanel" class="tab-pane fade" id="myoverview_course_view">
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+
+</html>

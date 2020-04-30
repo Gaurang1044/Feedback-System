@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title> dashboard </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head> 
+
+<body id="page" class="container-fluid" >
+
+
+    <div id="region-main" class="container-fluid">
+        <form action="">
+            <%for (var i=0;i< quesArr.length;i++){ %>
+            <label  > <%=quesArr[i].questionId%> </label>
+            <label  > <%= quesArr[i].statement %> </label>
+            
+                <% if (quesArr[i].type =="multiple"){ %>
+                    <% for (var j=0;j< quesArr[i].options.length;j++) { %>
+                    <input type="radio" id= '<%= quesArr[i].options[j].label %>' name= '<%= quesArr[i].questionId %>'  value = '<%=  quesArr[i].options[j].value %>' >
+                    <% }%>
+                <%}%>
+                <% if (quesArr[i].type =="text"){ %>
+                    <input type="text" id= '<%= quesArr[i].questionId %>'  >
+                    
+                <%}%>
+            <br>
+            <% } %>
+            <button type="submit">Go!</button>
+        </form>
+    </div>
+
+    
+
+</body>
+
+</html>

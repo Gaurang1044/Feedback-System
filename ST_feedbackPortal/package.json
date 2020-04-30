@@ -1,0 +1,27 @@
+{
+  "name": "st_feedbackportal",
+  "version": "1.0.0",
+  "description": "a student teacher feedback portal for college",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AAYUSH-GARG-234/ST_feedbackPortal.git"
+  },
+  "author": "Aayush_Gaurang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AAYUSH-GARG-234/ST_feedbackPortal/issues"
+  },
+  "homepage": "https://github.com/AAYUSH-GARG-234/ST_feedbackPortal#readme",
+  "dependencies": {
+    "cookie-parser": "^1.4.5",
+    "ejs": "^3.1.2",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.10"
+  },
+  "devDependencies": {}
+}

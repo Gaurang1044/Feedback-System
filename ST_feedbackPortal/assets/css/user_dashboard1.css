@@ -1,0 +1,125 @@
+#page{
+    margin-top: 50px;
+}
+.jumbotron{
+    padding: 3rem 2rem;
+}
+#profileName{
+    font-size: 4.3rem;
+    font-family:"Times New Roman", Times, serif;
+    text-align: center;
+}
+.pr-5, .px-5 {
+    padding-right: 3rem!important;
+    padding-top: 4rem;
+}
+.thumbnail img{
+    border-radius: 50%;
+    height: 19rem;
+    width: 17rem;
+}
+#head>.card{
+    width: 40rem;
+    height: 18rem;
+}
+#head>.card-body a{
+    font-size: 1.5rem;
+}
+.card-title{
+    font-weight: 400;
+}
+
+
+#region-main>.card{
+    overflow-x: auto;
+    overflow-y: visible;
+    min-height: 45rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    -webkit-background-clip: border-box;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+#region-main {
+    float: left;
+    width: 100%;
+}
+
+#region-main>.card-body{
+    flex: 1 1 auto;
+    padding: 1.25rem;
+}
+
+#region-main>.d-inline {
+    display: inline!important;
+}
+
+#region-main>.card-title {
+    margin-bottom: .75rem;
+}
+h5{
+    font-size: 2.3rem;
+    margin-bottom: .5rem;
+    font-family: inherit;
+    font-weight: 400;
+    line-height: 1.2;
+    color: inherit;
+}
+
+.m-t-3, .m-y-3 {
+    margin-top: 3rem!important;
+}
+.text-center {
+    text-align: center!important;
+}
+.card-text:last-child {
+    margin-bottom: 0;
+}
+.nav-tabs .nav-link{
+    font-size: 2rem;
+}
+
+.block_myoverview .content-centred {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.fade.in {
+    opacity: 1;
+}
+
+.tab-content>.active {
+    display: block;
+}
+/* .tab-content>.tab-pane {
+    display: none;
+} */
+.fade.show {
+    opacity: 1;
+}
+.fade {
+    opacity: 0;
+    -webkit-transition: opacity .15s linear;
+    -o-transition: opacity .15s linear;
+    transition: opacity .15s linear;
+}
+
+.block_myoverview .empty-placeholder-image-lg {
+    height: 250px;
+    vertical-align: middle;
+    border-style: none;
+}
+
+
