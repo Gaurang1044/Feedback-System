@@ -1,0 +1,33 @@
+<link rel="stylesheet" href="/css/card2.css">
+
+<div id="body">
+
+    <div class="blog-post">
+        <div class="blog-post__img">
+            <img src="/images/Engineering-Courses.jpg" alt="">
+        </div>
+        <div class="blog-post__info">
+            <div class="blog-post__date">
+                <span><%=course.teach_name%></span>
+                <span><%=course.teacher_id%></span>
+            </div>
+            <!-- <%=course.teacher_id%> -->
+            <h1 class="blog-post__title"><%=course.name%></h1>
+            <p class="blog-post__text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet dolor enim
+                omnis, tempora, temporibus iusto laborum quaerat cumque exercitationem, ipsam saepe voluptatibus velit
+                totam maiores. Provident, eum! Enim, minima vel?
+            </p>
+            <a href="#" class="blog-post__cta">Course Data</a>
+            <% var link = "/users/" %>
+            <% if( user_type == 0){ %>
+            <a href="/users/form/?cname=<%= course.name %>&id=<%= course.course_id %>&tname=<%=course.teach_name%>&tid=<%=course.teacher_id%>"
+                class="blog-post__cta">Feedback</a>
+
+            <% }else { %>
+            <a href="/users/formT/?cname=<%= course.name %>&id=<%= course.course_id %>&tname=<%=course.teach_name%>&tid=<%=course.teacher_id%>"
+                class="blog-post__cta">Feedback</a>
+            <% } %>
+        </div>
+    </div>
+</div>

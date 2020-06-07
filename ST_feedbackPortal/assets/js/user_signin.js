@@ -2,8 +2,8 @@ $(document).ready(function () {
 
     'use strict';
 
-      var emailError    = true,
-          passwordError = true;
+    var emailError = true,
+        passwordError = true;
 
     // Detect browser for css purpose
     if (navigator.userAgent.toLowerCase().indexOf('firefox') > -1) {

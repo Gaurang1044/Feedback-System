@@ -1,0 +1,17 @@
+footer{
+    min-height: 10rem;
+    text-align: left;
+    background-color: #DAFBF2!important;
+    /* position: relative; */
+}
+span{
+    color: black;
+    font-size: 2rem;
+}
+a{
+    font-size: 2rem;
+    color: #6B6C6D;
+}
+a:hover{
+    color: black;
+}

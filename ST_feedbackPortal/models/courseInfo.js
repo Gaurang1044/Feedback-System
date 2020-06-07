@@ -13,29 +13,29 @@ const courseInfoSchema = new mongoose.Schema({
     },
     course_name: {
         type: String,
-        required: true 
+        required: true
     },
     department_name: {
         type: String,
-        required: true 
+        required: true
     },
     semester_no: {
         type: Number,
-        required: true 
+        required: true
     },
     student_year: {
         type: Number,
-        required: true 
+        required: true
     },
     credits: {
         type: Number,
-        required: true 
+        required: true
     }
 }, {
-    timestamps:true
+    timestamps: true
 });
 
-const CourseInfo = mongoose.model('CourseInfo' , courseInfoSchema);
+const CourseInfo = mongoose.model('CourseInfo', courseInfoSchema);
 
 module.exports = CourseInfo;
 

@@ -2,9 +2,9 @@
   "name": "st_feedbackportal",
   "version": "1.0.0",
   "description": "a student teacher feedback portal for college",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "start": "nodemon index.js",
+    "start": "nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -18,10 +18,14 @@
   },
   "homepage": "https://github.com/AAYUSH-GARG-234/ST_feedbackPortal#readme",
   "dependencies": {
+    "chart.js": "^2.9.3",
     "cookie-parser": "^1.4.5",
+    "cron": "^1.8.2",
     "ejs": "^3.1.2",
     "express": "^4.17.1",
-    "mongoose": "^5.9.10"
+    "express-ejs-layouts": "^2.5.0",
+    "mongoose": "^5.9.10",
+    "node-cron": "^2.0.3"
   },
   "devDependencies": {}
 }

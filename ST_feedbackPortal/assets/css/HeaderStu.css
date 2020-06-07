@@ -1,0 +1,54 @@
+:root{
+    font-size: 30px;
+}
+.navbar-light .navbar-nav  {
+    color: white;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: white;
+}
+#navbarSupportedContent>#linkcolor>li>a:hover{
+    color: blue;
+}
+#navbarSupportedContent>#linkcolor>li>#noty>i:hover{
+    color: blue;
+}
+.navbar{
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,.08);
+}
+.navbar img{
+    height: 4.6rem;
+}
+
+.bg-light {
+    background-color: #DAFBF2!important;
+}
+
+img.userpicture {
+    margin-right: 1rem;
+}
+.userpicture {
+    border-radius: 50%;
+}
+img {
+    vertical-align: middle;
+    border-style: none;
+}
+.mr-1{
+    margin-right: .5rem!important;
+}
+.dropdown a{
+    color: rgba(0,0,0,.5);
+}
+.dropdown a:hover{
+    color: black;
+}
+.dropdown-menu{
+    min-width: 20rem;
+}
+
+.fa, .fab, .fad, .fal, .far, .fas {
+    line-height: 2.15;
+}

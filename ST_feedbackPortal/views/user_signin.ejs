@@ -1,86 +1,88 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <title><%= title%></title>
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Raleway:300,600" rel="stylesheet">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
-<link rel="stylesheet" href="/css/user_signin.css">
+   <meta charset="UTF-8">
+   <title><%= title%></title>
+   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Raleway:300,600" rel="stylesheet">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+   <link rel="stylesheet" href="/css/user_signin.css">
 
 </head>
+
 <body>
-<!-- partial:index.partial.html -->
-<div class="container">
-   <section id="formHolder">
+   <!-- partial:index.partial.html -->
+   <div class="container">
+      <section id="formHolder">
 
-      <div class="row">
+         <div class="row">
 
-         <!-- Brand Box -->
-         <div class="col-sm-6 brand">
-            <a href="#" class="logo">WELCOME <span>.</span></a>
-    
-            <div class="heading">
-                <h2>PEC</h2>
-                <p>Explore Innovate Excel</p>
+            <!-- Brand Box -->
+            <div class="col-sm-6 brand">
+               <a href="#" class="logo">WELCOME <span>.</span></a>
+
+               <div class="heading">
+                  <h2>PEC</h2>
+                  <p>Explore Innovate Excel</p>
+               </div>
+
+               <div class="success-msg">
+                  <p>Great! You are one of our members now</p>
+                  <a href="#" class="profile">Your Profile</a>
+               </div>
             </div>
-    
-            <div class="success-msg">
-                <p>Great! You are one of our members now</p>
-                <a href="#" class="profile">Your Profile</a>
+
+
+            <!-- Form Box -->
+            <div class="col-sm-6 form">
+
+               <!-- Login Form -->
+               <div class="login form-peice switched">
+                  <form class="login-form" action="/users/create-session" method="POST">
+                     <div class="form-group">
+                        <label for="loginemail">Email Address</label>
+                        <input type="email" name="email" id="loginemail" required>
+                     </div>
+
+                     <div class="form-group">
+                        <label for="loginPassword">Password</label>
+                        <input type="password" name="password" id="loginPassword" required>
+                     </div>
+                     <div class="form-group">
+                        <select name="user_type">
+                           <option value="0">Student </option>
+                           <option value="1">Teacher</option>
+
+                        </select>
+                     </div>
+
+                     <div class="CTA">
+                        <input type="submit" value="Login">
+
+                     </div>
+                  </form>
+               </div>
+               <!-- End Login Form -->
+
             </div>
          </div>
 
-
-         <!-- Form Box -->
-         <div class="col-sm-6 form">
-
-            <!-- Login Form -->
-            <div class="login form-peice switched">
-               <form class="login-form" action="/users/create-session" method="POST">
-                  <div class="form-group">
-                     <label for="loginemail">Email Address</label>
-                     <input type="email" name="email" id="loginemail" required>
-                  </div>
-
-                  <div class="form-group">
-                     <label for="loginPassword">Password</label>
-                     <input type="password" name="password" id="loginPassword" required>
-                  </div>
-                  <div class="form-group">
-                     <select name="user_type">
-                         <option value="0">Student </option>
-                         <option value="1">Teacher</option>
-                         <option value="2">Dean</option>
-                         <option value="3">DSA</option>
-                     </select>
-                 </div>
- 
-                  <div class="CTA">
-                     <input type="submit" value="Login">
-                    
-                  </div>
-               </form>
-            </div>
-            <!-- End Login Form -->
-           
-         </div>
-      </div>
-
-   </section>
+      </section>
 
 
-   <footer>
-      <p style="font-size: 2.5rem;">
-         Form made by: <a href="https://www.pec.ac.in/" target="_blank">PEC, University of Technology</a>
-      </p>
-   </footer>
+      <footer>
+         <p style="font-size: 2.5rem;">
+            Project sponsored by: <a href="https://www.pec.ac.in/" target="_blank">PEC, University of Technology</a>
+         </p>
+      </footer>
 
-</div>
-<!-- partial -->
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js'></script>
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
-  <script  src="/js/user_signin.js"></script>
+   </div>
+   <!-- partial -->
+   <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js'></script>
+   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+   <script src="/js/user_signin.js"></script>
 
 </body>
+
 </html>

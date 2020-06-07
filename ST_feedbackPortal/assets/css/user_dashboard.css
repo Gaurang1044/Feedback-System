@@ -1,8 +1,15 @@
+body {
+    /* -moz-transform: scale(1, 1); Firefox-browsers */
+    zoom: 0.3; /* Other non-webkit browsers */
+    zoom: 30%; /* Chrome, IE browsers */
+}
 #page{
     margin-top: 50px;
 }
 .jumbotron{
     padding: 3rem 2rem;
+    border-radius: 2rem;
+    background-color: lightcyan;
 }
 #profileName{
     font-size: 4.3rem;
@@ -43,6 +50,7 @@
     -webkit-background-clip: border-box;
     background-clip: border-box;
     border: 1px solid rgba(0,0,0,.125);
+    border-radius: 1rem;
 }
 .row {
     display: flex;
@@ -80,10 +88,10 @@ h5{
 .tabContainer{
     margin: auto;
     width : 85%;
-    height: 90vh;
+    /* height: 90vh; */
 }
 .tabContainer .buttonContainer{
-    height: 80px;
+    height: 9rem;
     padding-bottom: 2px;
     /* border-bottom: 1px solid rgba(0,0,0,.35); */
 }
@@ -110,3 +118,11 @@ h5{
     border-bottom: none;
 }
 
+.container-fluid, .container-lg, .container-md, .container-sm, .container-xl {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 1rem 1rem 0rem 0rem;
+}

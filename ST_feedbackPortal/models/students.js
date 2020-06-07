@@ -9,33 +9,33 @@ const studentSchema = new mongoose.Schema({
     name: {
         type: String,
         required: true
-        
+
     },
     email: {
         type: String,
         required: true,
-        unique: true 
+        unique: true
     },
-    // hfhfhfhf
+
     password: {
         type: String,
         required: true
-        
+
     },
     department_name: {
         type: String,
-        required: true 
+        required: true
     },
     phone_no: {
         type: String,
         required: true,
-        unique: true 
+        unique: true
     }
 }, {
-    timestamps:true
+    timestamps: true
 });
 
-const Student = mongoose.model('Student' , studentSchema);
+const Student = mongoose.model('Student', studentSchema);
 
 module.exports = Student;
 

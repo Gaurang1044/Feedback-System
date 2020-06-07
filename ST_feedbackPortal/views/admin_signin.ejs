@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <title><%= title%></title>
+   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Raleway:300,600" rel="stylesheet">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+   <link rel="stylesheet" href="/css/admin_signin.css">
+
+</head>
+
+<body>
+   <!-- partial:index.partial.html -->
+   <div class="container">
+      <section id="formHolder">
+
+         <div class="row">
+
+            <!-- Brand Box -->
+            <div class="col-sm-6 brand">
+               <a href="#" class="logo">WELCOME <span>.</span></a>
+
+               <div class="heading">
+                  <h2>PEC</h2>
+                  <p>Explore Innovate Excel</p>
+               </div>
+
+               <div class="success-msg">
+                  <p>Great! You are one of our members now</p>
+                  <a href="#" class="profile">Your Profile</a>
+               </div>
+            </div>
+
+
+            <!-- Form Box -->
+            <div class="col-sm-6 form">
+
+               <!-- Login Form -->
+               <div class="login form-peice switched">
+                  <form class="login-form" action="/admin/create-session" method="POST">
+                     <div class="form-group">
+                        <label for="loginemail">Email Address</label>
+                        <input type="email" name="email" id="loginemail" required>
+                     </div>
+
+                     <div class="form-group">
+                        <label for="loginPassword">Password</label>
+                        <input type="password" name="password" id="loginPassword" required>
+                     </div>
+
+                     <div class="CTA">
+                        <input type="submit" value="Login">
+
+                     </div>
+                  </form>
+               </div>
+               <!-- End Login Form -->
+
+            </div>
+         </div>
+
+      </section>
+
+
+      <footer>
+         <p style="font-size: 2.5rem;">
+            Project sponsored by: <a href="https://www.pec.ac.in/" target="_blank">PEC, University of Technology</a>
+         </p>
+      </footer>
+
+   </div>
+   <!-- partial -->
+   <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js'></script>
+   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+   <script src="/js/admin_signin.js"></script>
+
+</body>
+
+</html>

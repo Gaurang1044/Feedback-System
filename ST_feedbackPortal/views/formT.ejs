@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>form</title>
+  <link href="https://cdn.jotfor.ms/static/formCss.css?3.3.17493" rel="stylesheet" type="text/css">
+  <link type="text/css" media="print" rel="stylesheet" href="https://cdn.jotfor.ms/css/printForm.css?3.3.17493">
+  <link type="text/css" rel="stylesheet" href="https://cdn.jotfor.ms/css/styles/nova.css?3.3.17493">
+  <link type="text/css" rel="stylesheet"
+    href="https://cdn.jotfor.ms/themes/CSS/566a91c2977cdfcd478b4567.css?themeRevisionID=5dca5ac9a5e86d17235d90c1">
+  <link type="text/css" rel="stylesheet" href="https://cdn.jotfor.ms/css/styles/payment/styles.css?3.3.17493">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <title>My Chart.js Chart</title>
+  <link rel="stylesheet" href="/css/formT.css">
+</head>
+
+<body style="line-height: 1.6;">
+  <form action="/users/submit-form" method="POST">
+    <input type="text" name="course_id" hidden value='<%=course_id%>'>
+    <input type="text" name="teacher_id" hidden value='<%=teacher_id%>'>
+    <div role="main" class="form-all">
+      <ul class="form-section page-section">
+        <li id="cid_1" class="form-input-wide" data-type="control_head">
+          <div class="form-header-group  header-large">
+            <div class="header-text httal htvam">
+              <h1 id="header_1" class="form-header" data-component="header">
+                Course Instructor Feedback
+              </h1>
+            </div>
+          </div>
+        </li>
+
+        <li class="form-line" data-type="control_matrix" id="id_7">
+          <label class="form-label form-label-top" id="label_7" for="input_7"> Instructor Feedback </label>
+          <div id="cid_7" class="form-input-wide">
+            <table summary="" role="presentation" cellpadding="4" cellspacing="0" class="form-matrix-table"
+              data-component="matrix">
+              <tbody>
+                <tr class="form-matrix-tr form-matrix-header-tr">
+                  <th class="form-matrix-th" style="border:none">
+                    &nbsp;
+                  </th>
+
+                  <% for (var j=0;j< quesArr[0].options.length;j++) { %>
+                  <% var idd= "label_7_col_" + j %>
+                  <th scope="col" class="form-matrix-headers form-matrix-column-headers form-matrix-column_0">
+                    <label id="<%= idd %>"> <%= quesArr[0].options[j].value %> </label>
+                  </th>
+                  <% }%>
+                </tr>
+
+                <%for (var i=1;i< quesArr.length;i++){ %>
+
+                <% var idd = "input_7_"+ i + "_" + j %>
+                <% var labell = "label_7 label_7_row_" + quesArr[i].questionId %>
+                <% var iddd = "label_7_row_" + quesArr[i].questionId %>
+                <% var namee = "q7_instructorFeedback" + i %>
+
+                <t r class="form-matrix-tr form-matrix-value-tr" role="group" aria-labelledby="<%= labell %>">
+                  <th scope="row" class="form-matrix-headers form-matrix-row-headers">
+                    <label id="<%= iddd %>"> <%= quesArr[i].statement %> </label>
+                  </th>
+
+                  <% if (quesArr[i].type =="multiple"){ %>
+                  <% for (var j=0; j< quesArr[i].options.length;j++) { %>
+                  <% var idd = "input_7_"+ i + "_" + j %>
+                  <% var label = "label_7_col_"+j %>
+                  <% var namee = "responses[" + i + "]" %>
+
+                  <td class="form-matrix-values">
+                    <div id="<%= idd %>" name="<%= namee %>" value='<%=  quesArr[i].options[j].value %>'
+                      aria-labelledby="<%= label %>" required>55%</div>
+                    <label for="<%= idd %>" class="matrix-choice-label matrix-radio-label"> </label>
+                  </td>
+
+                  <%}%>
+                      <%}%>
+                  </tr>
+                  <%}%>
+                  </tbody></table>
+                </div>
+              </li>
+              
+            </ul>
+            <!-- ////////////////////////////////// -->
+          <div class="row">
+            <!-- <div class="chart_jumbotron" style="max-width: 500px;"> -->
+              <div class="chart_jumbotron col-lg-4" >
+                <canvas id="myChart1"></canvas>
+              </div>
+
+              <div class="chart_jumbotron col-lg-4" >
+                <canvas id="myChart2"></canvas>
+              </div>
+                        
+            <script>
+              let myChart1 = document.getElementById('myChart1').getContext('2d');
+              var da = {};
+              ;
+              // console.log(<%= respArr["res"] %>);
+              // Global Options
+              Chart.defaults.global.defaultFontFamily = 'Lato';
+              Chart.defaults.global.defaultFontSize = 10;
+              Chart.defaults.global.defaultFontColor = '#777';
+              var data1 = {
+                labels: ['Boston', 'Worcester', 'Lowell', 'Cambridge', 'New Bedford'],
+                datasets: [{
+                  label: 'Population',
+                  data: [
+                    617594,
+                    181045,
+                    153060,
+                    106519,
+                    105162
+                  ],
+                  //backgroundColor:'green',
+                  // backgroundColor:[
+                  // 'rgb(107, 198, 59)',
+                  // 'rgb(200, 220, 24)',
+                  // 'rgb(255, 193, 0)',
+                  // 'rgb(255, 108, 0)',
+                  // 'rgb(255, 55, 51)'
+                  // ]
+
+                  backgroundColor: [
+                    'rgb(63, 122, 216)',
+                    'rgb(159, 188, 235)',
+                    'rgb(255, 255, 255)',
+                    'rgb(221, 144, 221)',
+                    'rgb(183, 21, 183)'
+                  ],
+                  borderWidth: 1,
+                  borderColor: '#777',
+                  hoverBorderWidth: 3,
+                  hoverBorderColor: '#000'
+                }]
+              }
+              let massPopChart = new Chart(myChart1, {
+                type: 'doughnut', // bar, horizontalBar, pie, line, doughnut, radar, polarArea
+                data: data1,
+                options: {
+                  title: {
+                    display: true,
+                    text: 'Largest Cities In Massachusetts',
+                    fontSize: 25
+                  },
+                  legend: {
+                    display: true,
+                    position: 'right',
+                    labels: {
+                      fontColor: '#000'
+                    }
+                  },
+                  layout: {
+                    padding: {
+                      left: 50,
+                      right: 0,
+                      bottom: 0,
+                      top: 0
+                    }
+                  },
+                  tooltips: {
+                    enabled: true
+                  }
+                }
+              });
+
+              let myChart2 = document.getElementById('myChart2').getContext('2d');
+              var data2 = {
+                labels: ['Boston', 'Worcester', 'Springfield', 'Cambridge', 'New Bedford'],
+                datasets: [{
+                  label: 'Population',
+                  data: [
+                    17594,
+                    11045,
+                    15060,
+                    15162,
+                    55072
+                  ],
+                  backgroundColor: [
+                    'rgb(107, 198, 59)',
+                    'rgb(200, 220, 24)',
+                    'rgb(255, 193, 0)',
+                    'rgb(255, 108, 0)',
+                    'rgb(255, 55, 51)'
+                  ],
+
+                  // backgroundColor:[
+                  // 'rgb(63, 122, 216)',
+                  // 'rgb(159, 188, 235)',
+                  // 'rgb(255, 255, 255)',
+                  // 'rgb(221, 144, 221)',
+                  // 'rgb(183, 21, 183)'
+                  // ],
+                  borderWidth: 1,
+                  borderColor: '#777',
+                  hoverBorderWidth: 3,
+                  hoverBorderColor: '#000'
+                }]
+              }
+              let massPopChart2 = new Chart(myChart2, {
+                type: 'doughnut', // bar, horizontalBar, pie, line, doughnut, radar, polarArea
+                data: data2,
+                options: {
+                  title: {
+                    display: true,
+                    text: 'Largest Bill In Massachusetts',
+                    fontSize: 25
+                  },
+                  legend: {
+                    display: true,
+                    position: 'right',
+                    labels: {
+                      fontColor: '#000'
+                    }
+                  },
+                  layout: {
+                    padding: {
+                      left: 50,
+                      right: 0,
+                      bottom: 0,
+                      top: 0
+                    }
+                  },
+                  tooltips: {
+                    enabled: true
+                  }
+                }
+              });
+            </script>
+
+
+          </div>
+    </div>
+  </form>
+
+</body>
+
+</html>
